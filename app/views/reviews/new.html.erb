@@ -1,0 +1,6 @@
+<h1>formulaire de review</h1>
+<%= simple_form_for [ @girl, @review] do |f| %>
+<%= f.input :content %>
+<%= f.submit "envoyer" %>
+<% end %>
+<%= link_to "retour", girl_path(@girl) %>

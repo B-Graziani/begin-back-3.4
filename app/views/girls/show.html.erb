@@ -2,6 +2,23 @@
 <p><%= @girl.size %></p>
 <p><%= @girl.weight %></p>
 <p><%= link_to "rating", rating_girl_path(@girl) %></p>
+<%= link_to "laisser un message", new_girl_review_path(@girl) %>
+<br>
+<ul>
+  <% @girl.reviews.each do |review| %>
+  <li>
+    <%= review.content %>
+    <%= link_to "delete", review_path(review), method: :delete, data: { confirm: "are you sure?"} %>
+  </li>
+  <% end %>
+</ul>
+<br>
 <%= link_to "modifier profil", edit_girl_path(@girl) %>
 <br>
 <%= link_to "retour", girls_path %>
+
+
+
+
+
+
