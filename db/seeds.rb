@@ -8,11 +8,11 @@
 puts "cleaning Database"
 Girl.destroy_all
 puts "creating Database"
-girl1 = { name: "Nina", size: "163", weight: "55" }
-girl2 = { name: "Jessica", size: "165", weight: "55" }
-girl3 = { name: "Sarah", size: "167", weight: "55" }
-girl4 = { name: "Shanice", size: "170", weight: "55" }
-girl5 = { name: "Nikita", size: "155", weight: "55" }
+girl1 = { name: "Nina", size: "163", weight: "55", rating: "5" }
+girl2 = { name: "Jessica", size: "165", weight: "55", rating: "3" }
+girl3 = { name: "Sarah", size: "167", weight: "55", rating: "3" }
+girl4 = { name: "Shanice", size: "170", weight: "55", rating: "5" }
+girl5 = { name: "Nikita", size: "155", weight: "55", rating: "5" }
 Girls = []
 [girl1, girl2, girl3, girl4, girl5].each_with_index do |attributes, index|
 girl = Girl.create!(attributes)
