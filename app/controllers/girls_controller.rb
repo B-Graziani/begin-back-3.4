@@ -5,6 +5,12 @@ class GirlsController < ApplicationController
   def show
     @girl = Girl.find(params[:id])
   end
+  def top
+    @girls = Girl.where(rating:5)
+  end
+  def rating
+    @girl = Girl.find(params[:id])
+  end
   def new
     @girl = Girl.new
   end

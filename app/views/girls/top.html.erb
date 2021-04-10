@@ -1,5 +1,4 @@
-<h1>All Girls</h1>
-<h2><%= link_to "Best girl", top_girls_path %></h2>
+<h1>Best Girls</h1>
 <ul>
   <% @girls.each do |girl| %>
   <li>
@@ -9,5 +8,4 @@
   </li>
   <% end %>
 </ul>
-
-<%= link_to "create an new profil", new_girl_path %>
+<%= link_to "retour", girls_path %>
