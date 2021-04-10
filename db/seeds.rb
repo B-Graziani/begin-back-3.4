@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "cleaning Database"
-Woman.destroy_all
+Girl.destroy_all
 puts "creating Database"
-woman1 = { pseudo: "Nina", size: "163", weight: "55" }
-woman2 = { pseudo: "Jessica", size: "165", weight: "55" }
-woman3 = { pseudo: "Sarah", size: "167", weight: "55" }
-woman4 = { pseudo: "Shanice", size: "170", weight: "55" }
-woman5 = { pseudo: "Nikita", size: "155", weight: "55" }
-Women = []
-[woman1, woman2, woman3, woman4, woman5].each_with_index do |attributes, index|
-woman = Woman.create!(attributes)
-Women << woman
+girl1 = { name: "Nina", size: "163", weight: "55" }
+girl2 = { name: "Jessica", size: "165", weight: "55" }
+girl3 = { name: "Sarah", size: "167", weight: "55" }
+girl4 = { name: "Shanice", size: "170", weight: "55" }
+girl5 = { name: "Nikita", size: "155", weight: "55" }
+Girls = []
+[girl1, girl2, girl3, girl4, girl5].each_with_index do |attributes, index|
+girl = Girl.create!(attributes)
+Girls << girl
 end
