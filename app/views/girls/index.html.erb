@@ -1,1 +1,12 @@
 <h1>All Girls</h1>
+<ul>
+  <% @girls.each do |girl| %>
+  <li>
+    <%= girl.name %>
+    <%= link_to "profil", girl_path(girl) %>
+    <%= link_to "delete", girl_path(girl), method: :delete, data: { confirm: "are you sure?"} %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "create an new profil", new_girl_path %>
